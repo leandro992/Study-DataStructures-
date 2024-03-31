@@ -1,6 +1,6 @@
 package datastructure.learn.exercicios;
 
-import java.util.Objects;
+import java.util.stream.Stream;
 
 public class PrintTheElementsLinkedList {
     static class SinglyLinkedListNode {
@@ -48,13 +48,7 @@ public class PrintTheElementsLinkedList {
 
 
     static void printLinkedList(SinglyLinkedListNode head) {
-        if (Objects.isNull(head)){
-            System.out.println("");
-        }
-
-//        for (int i = 0; i < head.data; i++) {
-//            System.out.printf(String.valueOf(data));
-//        }
+       Stream.of(head).forEach(System.out::println);
 
     }
 }
