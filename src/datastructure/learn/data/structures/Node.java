@@ -1,33 +1,33 @@
 package datastructure.learn.data.structures;
 
-public class Node<T> {
+public class Node {
 
-    private T element;
-    private Node<T> next;
+    private Object element;
+    private Node next;
 
-    public Node(T element) {
+    public Node(Object element) {
         this.element = element;
         this.next = null;
     }
 
-    public Node(T element, Node<T> next) {
+    public Node(Object element, Node next) {
         this.element = element;
         this.next = next;
     }
 
-    public T getElement() {
+    public Object getElement() {
         return element;
     }
 
-    public void setElement(T element) {
+    public void setElement(Object element) {
         this.element = element;
     }
 
-    public Node<T> getNext() {
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 }

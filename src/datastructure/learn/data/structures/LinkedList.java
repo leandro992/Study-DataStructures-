@@ -1,22 +1,14 @@
 package datastructure.learn.data.structures;
 
-public class LinkedList<T> {
-    private Node<T> head;
-    private Node<T> last;
-    private int size = 0;
+public class LinkedList {
+    private Node head;
+    private int size;
 
-    public void add(T element){
-        Node<T> newNode = new Node<>(element);
-        if (element != null){
-            this.head = newNode;
-        }else{
-            Node<T> currHead = this.head;
-            while (currHead.getNext()!=null){
-               currHead = currHead.getNext();
-            }
-            currHead.setNext(newNode);
-            this.size++;
-        }
+    public int get(int index){
+        if (index > size || index < 0) return -1;
+        Node node = head;
+        for(int i =0; i < index; i++) node = node.getNext();
+        return node == null ? -1 : (int) node.getElement();
     }
 
 }
